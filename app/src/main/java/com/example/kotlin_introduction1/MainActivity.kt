@@ -37,5 +37,13 @@ class MainActivity : AppCompatActivity() {
         q12.checkFine();
         val q13=MainF()
         q13.checkBookAvailable();
+        val q14=Ques5()
+        println("For 58 marks grade is ${q14.calculateGrade(58)}");
+        val q15=Ques6()
+        q15.mutabeListExample();
+        val q16=Ques7()
+        q16.mutableMapExample();
+        val q17=Ques8()
+        q17.hashSetExample();
     }
 }
