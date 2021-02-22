@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_introduction1.Kotlin_Introduction2.*
+import com.example.kotlin_introduction1.Kotlin_Introduction3.Prob4
+import com.example.kotlin_introduction1.Kotlin_Introduction3.Ques2
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val q1=Question1()
+        /*val q1=Question1()
         q1.changeString()
         val q3=Question3()
         q3.countOccurrences()
@@ -44,6 +46,9 @@ class MainActivity : AppCompatActivity() {
         val q16=Ques7()
         q16.mutableMapExample();
         val q17=Ques8()
-        q17.hashSetExample();
+        q17.hashSetExample();*/
+        println("Product of two numbers are ${Ques2.calculateProduct(10,20)}")
+        val q18=Prob4()
+        q18.printString()
     }
 }
