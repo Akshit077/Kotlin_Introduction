@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_introduction1.Kotlin_Introduction2.*
+import com.example.kotlin_introduction1.Kotlin_Introduction3.Ab
 import com.example.kotlin_introduction1.Kotlin_Introduction3.Prob4
 import com.example.kotlin_introduction1.Kotlin_Introduction3.Ques2
 
@@ -47,8 +48,10 @@ class MainActivity : AppCompatActivity() {
         q16.mutableMapExample();
         val q17=Ques8()
         q17.hashSetExample();*/
-        println("Product of two numbers are ${Ques2.calculateProduct(10,20)}")
+        /*println("Product of two numbers are ${Ques2.calculateProduct(10,20)}")
         val q18=Prob4()
-        q18.printString()
+        q18.printString()*/
+        val q19=Ab()
+        q19.printString();
     }
 }
