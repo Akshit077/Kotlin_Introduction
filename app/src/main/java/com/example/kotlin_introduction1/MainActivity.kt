@@ -2,6 +2,9 @@ package com.example.kotlin_introduction1
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_introduction1.Kotlin_Introduction2.*
 import com.example.kotlin_introduction1.Kotlin_Introduction3.Ab
@@ -9,9 +12,25 @@ import com.example.kotlin_introduction1.Kotlin_Introduction3.Prob4
 import com.example.kotlin_introduction1.Kotlin_Introduction3.Ques2
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var b1:Button
+    private lateinit var b2:Button
+    private lateinit var Et:EditText
+    private lateinit var Et1:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        b2=findViewById(R.id.bt2)
+        b1=findViewById(R.id.bt1)
+        Et=findViewById(R.id.et1)
+        Et1=findViewById(R.id.et2)
+
+        b2.setOnClickListener(View.OnClickListener {
+            Et.setText("")
+            Et1.setText("")
+        })
+        /*b1.setOnClickListener(View.OnClickListener {
+            if(Et1.text.toString())
+        })*/
         /*val q1=Question1()
         q1.changeString()
         val q3=Question3()
@@ -51,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         /*println("Product of two numbers are ${Ques2.calculateProduct(10,20)}")
         val q18=Prob4()
         q18.printString()*/
-        val q19=Ab()
-        q19.printString();
+        //val q19=Ab()
+        //q19.printString();
     }
 }
