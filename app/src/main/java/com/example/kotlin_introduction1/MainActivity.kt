@@ -1,15 +1,12 @@
 package com.example.kotlin_introduction1
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kotlin_introduction1.Kotlin_Introduction2.*
-import com.example.kotlin_introduction1.Kotlin_Introduction3.Ab
-import com.example.kotlin_introduction1.Kotlin_Introduction3.Prob4
-import com.example.kotlin_introduction1.Kotlin_Introduction3.Ques2
 
 class MainActivity : AppCompatActivity() {
     private lateinit var b1:Button
@@ -24,10 +21,67 @@ class MainActivity : AppCompatActivity() {
         Et=findViewById(R.id.et1)
         Et1=findViewById(R.id.et2)
 
+        //Check if password is valid or not
+
+        fun checkPassword():Boolean
+        {
+            if(Et1.text.toString()==("Akshit@1234"))
+            {
+                Toast.makeText(applicationContext,"Login Successfully",Toast.LENGTH_SHORT).show()
+                return true
+            }
+            else if (Et1.text.toString()=="")
+            {
+                Toast.makeText(applicationContext,"Fields are empty",Toast.LENGTH_SHORT).show()
+                return false
+            }
+            else
+            {
+                Toast.makeText(applicationContext,"Wrong Username or Password",Toast.LENGTH_SHORT).show()
+                return false
+            }
+
+        }
+
+        //Check if username is valid or not
+
+        fun checkUsername():Boolean
+        {
+            if(Et.text.toString()=="") {
+                Toast.makeText(applicationContext, "Fields are empty", Toast.LENGTH_SHORT).show()
+                return false
+            }
+            else if(Et.text.toString()=="Akshit007")
+            {
+                return true
+            }
+            else
+            {
+                Toast.makeText(applicationContext,"Wrong Username or Password",Toast.LENGTH_SHORT).show()
+                return false
+            }
+        }
+
+        //Functionality of reset button
+
         b2.setOnClickListener(View.OnClickListener {
             Et.setText("")
             Et1.setText("")
         })
+
+        //Functionality of submit button
+
+        b1.setOnClickListener(View.OnClickListener
+        {
+            checkPassword()
+            checkUsername()
+            if(checkPassword() && checkUsername())
+            {
+                intent =Intent(applicationContext,Home_Activity::class.java)
+                startActivity(intent)
+            }
+        })
+
         /*b1.setOnClickListener(View.OnClickListener {
             if(Et1.text.toString())
         })*/
